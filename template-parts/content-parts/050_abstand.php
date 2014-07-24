@@ -1,1 +1,13 @@
-"Fri Jun 27 2014 15:11:00 GMT-0400 (Eastern Daylight Time)" 
+<?php
+/**
+ * Abstand
+ *
+ */
+?>
+
+<?php 
+$abstand = get_sub_field('abstand');
+$bg = get_sub_field('hintergrund');
+?>	
+
+<div class="col <?php echo $abstand; ?> <?php echo $bg; ?>">	</div>

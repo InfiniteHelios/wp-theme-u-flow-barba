@@ -1,1 +1,10 @@
-"Wed Jun 25 2014 05:13:00 GMT-0400 (Eastern Daylight Time)" 
+<?php
+/**
+ * Inhalte in einer Spalte
+ *
+ */
+?>
+
+</section>
+
+<section id="<?php $idcontent = get_sub_field('einzigartiger_name'); echo sanitize_title($idcontent); ?>">
