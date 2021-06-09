@@ -42,7 +42,7 @@ get_header();
 		
 		<p class="fff ttuc js-scroll fade-in-bottom scrolled">Nehmen Sie jetzt Kontakt auf!</p>
 		
-		<a href="/" class="button2 js-scroll fade-in-bottom scrolled p-rel ' . $buttonCol . '" style="display: block; width: fit-content;">Kostenfreie Beratung <img data-src="https://uflow7.de/alpg/wp-content/uploads/2021/09/button-arrow.png" class="lazyload button-arrow"/></a>
+		<a href="/" class="button2 js-scroll fade-in-bottom scrolled p-rel ' . $buttonCol . '" style="display: block; width: fit-content;">Kostenfreie Beratung <img src="https://uflow7.de/alpg/wp-content/uploads/2021/09/button-arrow.png" class="button-arrow"/></a>
 
 		
 		</div>';

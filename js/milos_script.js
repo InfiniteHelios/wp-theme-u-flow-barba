@@ -27,7 +27,7 @@ function handleScrollAnimationInContainer(container) {
 	  const elementTop = el.getBoundingClientRect().top;
 
 	  return (
-		elementTop <=
+		(elementTop-100) <=
 		(window.innerHeight || container.documentElement.clientHeight) / dividend
 	  );
 	};
@@ -61,6 +61,16 @@ function handleScrollAnimationInContainer(container) {
 	window.addEventListener("scroll", () => { 
 	  handleScrollAnimation();
 	});
+	handleScrollAnimation();
+}
+
+/* show arrow button */
+function showArrowButton() {
+	var ele = document.querySelector("header img.button-arrow");
+	if (ele) {
+		ele.style.visibility = "visible";
+		ele.classList.add("rotating");
+	}
 }
 
 /** animation flying text */
@@ -101,6 +111,7 @@ function animateFlyingInText(element) {
       }
     }
     if (counter < childCount) setTimeout(animateRandomChild, 25);
+	else setTimeout(showArrowButton, 300);
   }
 
   animateRandomChild();
@@ -204,6 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		  if (element) {
 		  	element.classList.add("leave");
 	  	  }
+		  element = data.current.container.querySelector("main header video");
+		  if (element) {
+		  	element.classList.add("leave");
+	  	  }
 		  paraFlyOutAnimation(data.current.container);
 	    },
 		async leave(data) {
@@ -212,21 +227,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	  	},
 		async beforeEnter(data) {
 			prepareFlyInAnimation(data.next.container);
-			element = data.next.container.querySelector(".fullsize-video-bg .video-viewport video");
-			if (element) element.play();
 			prepareColorLineTransition(data.current.container, data.next.container);
 		},
 		async enter(data) {
-			await enterAnimation(data);
-			startFlyInAnimation(data.next.container);
+			TweenMax.from(".color-line-mask", 0.75, { width: "0px", ease: Power0.easeNone });
 			handleScrollAnimationInContainer(data.next.container);
-		TweenMax.from(".color-line-mask", 2.5, { width: "0px", ease: Power0.easeNone });
+			await enterAnimation(data);
+			element = data.next.container.querySelector(".fullsize-video-bg .video-viewport video");
+			if (element) element.play();
+			startFlyInAnimation(data.next.container);
 
 		},
 		async once(data) {
+			handleScrollAnimationInContainer(data.next.container);
 			paraFlyInAnimation(data.next.container);
 			menuAnimation(data.next.container);
-			handleScrollAnimationInContainer(data.next.container);
 		}
       },
     ],

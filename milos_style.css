@@ -1,3 +1,56 @@
+/* arrow image rotate animation */
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 1, 1,-45deg);
+    -o-transform: rotate3d(1, 1, 1,-45deg);
+    transform: rotate3d(1, 1, 1,-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -ms-transform: rotate3d(1, 1, 1,-45deg);
+    -moz-transform: rotate3d(1, 1, 1,-45deg);
+    -webkit-transform: rotate3d(1, 1, 1,-45deg);
+    -o-transform: rotate3d(1, 1, 1,-45deg);
+    transform: rotate3d(1, 1, 1,-45deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 0.5s linear;
+  -moz-animation: rotating 0.5s linear;
+  -ms-animation: rotating 0.5s linear;
+  -o-animation: rotating 0.5s linear;
+  animation: rotating 0.5s linear;
+}
+header img.button-arrow {
+	visibility: hidden;
+}
+
+/* color line transition */
 .color-line-mask {
   	width: 100%;
     margin-top: -21%;
@@ -133,7 +186,7 @@ header.once#masthead {
 main header {
   overflow: hidden;
 }
-main header img {
+main header > img {
   -webkit-animation: 1s ease-out 0s 1 mainImage;
   -moz-animation: 1s ease-out 0s 1 mainImage;
   -o-animation: 1s ease-out 0s 1 mainImage;
@@ -144,6 +197,22 @@ main header img {
   transform: scale(1.0);
 }
 main header img.leave {
+  -webkit-animation: 1s ease-out 0s 1 mainImageLeave;
+  -moz-animation: 1s ease-out 0s 1 mainImageLeave;
+  -o-animation: 1s ease-out 0s 1 mainImageLeave;
+  animation: 1s ease-out 0s 1 mainImageLeave;
+}
+main header video {
+  -webkit-animation: 1s ease-out 0s 1 mainImage;
+  -moz-animation: 1s ease-out 0s 1 mainImage;
+  -o-animation: 1s ease-out 0s 1 mainImage;
+  animation: 1s ease-out 0s 1 mainImage;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+main header video.leave {
   -webkit-animation: 1s ease-out 0s 1 mainImageLeave;
   -moz-animation: 1s ease-out 0s 1 mainImageLeave;
   -o-animation: 1s ease-out 0s 1 mainImageLeave;
