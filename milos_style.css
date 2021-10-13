@@ -1,3 +1,18 @@
+.color-line-mask {
+  	width: 100%;
+    margin-top: -21%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    height: fit-content;
+}
+.color-line-image {
+	top: 6px;
+    position: relative;
+}
 /* come down menu animation */
 @-webkit-keyframes slideInFromTop {
   from {
@@ -52,7 +67,7 @@ header.once#masthead {
 	  -webkit-filter: blur(0px);
 	}
   100% {
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.0);
   }
 }
 @-moz-keyframes mainImage {
@@ -67,7 +82,7 @@ header.once#masthead {
 	  -moz-filter: blur(0px);
 	}
   100% {
-    -moz-transform: scale(1.1);
+    -moz-transform: scale(1.0);
   }
 }
 @-o-keyframes mainImage {
@@ -82,7 +97,7 @@ header.once#masthead {
 	  -o-filter: blur(0px);
 	}
   100% {
-    -o-transform: scale(1.1);
+    -o-transform: scale(1.0);
   }
 }
 @keyframes mainImage {
@@ -97,12 +112,12 @@ header.once#masthead {
 	  filter: blur(0px);
 	}
   100% {
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
 }
 @keyframes mainImageLeave {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.0);
 	  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 	  filter: blur(0px);
   }
@@ -123,10 +138,10 @@ main header img {
   -moz-animation: 1s ease-out 0s 1 mainImage;
   -o-animation: 1s ease-out 0s 1 mainImage;
   animation: 1s ease-out 0s 1 mainImage;
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -o-transform: scale(1.0);
+  transform: scale(1.0);
 }
 main header img.leave {
   -webkit-animation: 1s ease-out 0s 1 mainImageLeave;
@@ -189,12 +204,12 @@ main header img.leave {
   }
 }
 
-h1.entry-title span {
+span.fly-span {
   opacity: 0;
   display: inline-block;
 }
 
-h1.entry-title span.in {
+span.fly-span.in {
   opacity: 1;
   display: inline-block;
   -webkit-animation: 0.3s ease-in 0s 1 spanIn;
@@ -257,11 +272,44 @@ h1.entry-title span.in {
   }
 }
 
-h1.entry-title span.out {
+span.fly-span.out {
   opacity: 0;
   display: inline-block;
   -webkit-animation: 0.3s ease-in 0s 1 spanOut;
   -moz-animation: 0.3s ease-in 0s 1 spanOut;
   -o-animation: 0.3s ease-in 0s 1 spanOut;
   animation: 0.3s ease-in 0s 1 spanOut;
+}
+
+/* Video Background */
+
+.fullsize-video-bg {
+  height: 100%;
+  overflow: hidden;
+}
+
+.fullsize-video-bg:before {
+  content: "";
+  background: rgba(114, 45, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.fullsize-video-bg:after {
+  content: "";
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC);
+  background-size: 3px 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.video-viewport {
+	margin-top: -100px;
+	margin-bottom: -100px;
 }

@@ -50,7 +50,240 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+/* titillium-web-600 - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../u-flow/fonts/titillium-web-v10-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../u-flow/fonts/titillium-web-v10-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../u-flow/fonts/titillium-web-v10-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../u-flow/fonts/titillium-web-v10-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../u-flow/fonts/titillium-web-v10-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../u-flow/fonts/titillium-web-v10-latin-600.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
 
+
+.p-rel{position: relative;}
+
+.site-header{transition: all 0.5s ease;
+background: linear-gradient( 
+360deg, rgba(255,255,255,0) 0%, rgb(23 23 23 / 0%) 80%);
+}
+
+.sticky {
+    background: rgb(255,255,255);
+    background: linear-gradient( 
+360deg, rgba(255,255,255,0) 0%, rgb(23 23 23 / 58%) 80%) !important;
+}
+#menu-item-24 a{
+    max-width: 236px;
+}
+
+#menu-item-76 a, .button2{
+    border-radius: 9px;
+    padding: 3px 7px;
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 0.9rem;
+	border: none;
+}
+
+h1, h2, h3, .pretext, .entry-title-sub{font-family: 'Titillium Web';}
+h1{margin: 0;}
+.entry-title-sub{font-size: 2rem; margin: 0;}
+
+.line{width: 33%; height: 1px; background: #333;}
+
+::before, ::after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.outer::before, .outer::after, .clear:before, .clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after{content: " "; display: table;}
+.outer::after, .clear:after, .site-footer:after{clear: both}
+
+.d-block{display: block;}
+
+.text-center-p{text-align: center;}
+.outer{margin-left: 5%; margin-right: 5%; position: relative;}
+
+.outer-alt{position: relative;}
+
+.w50{float: left; width: 50%;}
+.w50r{float: right; width: 50%;}
+
+.w50r .img-box{
+    margin-left: 15%;
+	margin-right: 9%;
+}
+
+
+.mb{margin-bottom: 5%;}
+
+h2 {
+    color: #0d4e96;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+	margin-top: 5px;
+}
+
+.fancy-title {
+    max-width: 176px;
+    margin-top: 27px;
+}
+
+.u-titel {
+    color: #2c3a57;
+    font-size: 1.5rem;
+}
+
+.pretext {
+    color: #035e8e;
+    margin-top: 23px;
+    font-size: 1.5rem;
+    margin-bottom: 7px;
+}
+
+.button{
+    background: #035e8e;
+    border: 1px solid;
+    border-radius: 9px;
+    padding: 5px 12px;
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.black{color: #202020;}
+
+.img-box {
+    line-height: 1;
+    max-width: 77%;
+    margin-left: 5%;
+}
+.img-box img {
+    border-radius: 9% 0px 9% 0%;
+	position: relative;
+	z-index: 1;
+}
+.img-box::before {
+    content: '';
+    background-image: linear-gradient(135deg, #ffffff 25%, #efefef 25%, #efefef 50%, #ffffff 50%, #ffffff 75%, #efefef 75%, #efefef 100%);
+background-size: 5.66px 5.66px;
+    position: absolute;
+    top: -5%;
+    bottom: 5%;
+    left: -5%;
+    right: 5%;
+    z-index: 0;
+    border-radius: 9% 0 9% 0;
+}
+.img-box::after{
+    content: '';
+	border: 2px solid #0a4a7b;
+    position: absolute;
+    top: -2.5%;
+    bottom: 2.5%;
+    left: -2.5%;
+    right: 2.5%;
+    z-index: 0;
+    border-radius: 9% 0 9% 0;
+}
+
+.title-extra-w50{
+position: absolute;
+        right: -2.5%;
+    bottom: 27%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
+
+
+.title-extra-w50::after {
+    content: '';
+    background: #0a4a7b;
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    left: 114%;
+    top: 44%;
+}
+
+.title-extra-w50r{
+position: absolute;
+        left: -5%;
+    bottom: 27%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
+
+
+.title-extra-w50r::after {
+    content: '';
+    background: #0a4a7b;
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    left: 114%;
+    top: 44%;
+}
+
+.gallery-image{line-height: 1;}
+.img-text-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(3,94,142,1) 80%);
+}
+.img-text-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    color: #fff;
+    line-height: 1.5;
+    left: 23%;
+}
+.img-text-center h2{color: #fff;}
+
+.gruenten{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#overview{
+    margin-top: -3%;
+}
+
+.button-arrow {
+    width: 66px;
+    position: absolute;
+    left: 107%;
+    top: 37%;
+}
+
+.ttuc{text-transform: uppercase;}
+.fff{color: #fff;}
+
+.blue #menu-item-76 a, .bg-blue{background: #035e8e;}
+.red #menu-item-76 a,.bg-red{background: #c36369;}
+.green #menu-item-76 a,.bg-green{background: #439056;}
 
 /*--------------------------------------------------------------
 # Generic
@@ -70,25 +303,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 html {
 	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
-		background: linear-gradient(-45deg, #505050, #4a4a4a, #363636, #3c3c3c);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
 }
 
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 
 /* Sections
@@ -114,7 +330,6 @@ main {
  */
 h1 {
 	font-size: 3.6em;
-	margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -684,12 +899,18 @@ textarea {
     z-index: 0;
 }
 
-.entry-title {
+.entry-box {
     position: absolute;
-    top: 66%;
+    top: 50%;
     bottom: 0;
-    left: 5%;
-    transform: translateY(-66%);
+    left: 7%;
+    transform: translateY(-50%);
+    text-shadow: -1px 3px 9px rgb(0 0 0 / 88%);
+    width: 53%;
+	z-index: 1;
+}
+
+.entry-title {
     color: #fff;
 }
 

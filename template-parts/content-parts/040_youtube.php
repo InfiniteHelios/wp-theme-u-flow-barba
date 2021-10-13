@@ -6,7 +6,7 @@
 ?>
 
 
-<div class="mb outer-alt">	
+<div class="mb outer-alt js-scroll fade-in-bottom">	
 	
 <?php 
 $layout = get_sub_field('layout'); 
@@ -24,14 +24,19 @@ $sc = '[exif id='.$id.']';
 	<div class="p-rel line-height-0 gallery-image">
 		<picture>
 			<!--[if IE 9]><video style="display: none"><![endif]-->
-			<source data-srcset="<?php echo $bild['sizes']['rcaltlarge'] ?>" media="(min-width: 1200px)" />
-			<source data-srcset="<?php echo $bild['sizes']['rcmedlarge'] ?>" media="(min-width: 480px)" />
-			<source data-srcset="<?php echo $bild['sizes']['rcaltmedium'] ?>" media="(max-width: 480px)" />
+			<source data-srcset="<?php echo $bild['sizes']['ularge'] ?>" media="(min-width: 1200px)" />
+			<source data-srcset="<?php echo $bild['sizes']['ularge'] ?>" media="(min-width: 480px)" />
+			<source data-srcset="<?php echo $bild['sizes']['ularge'] ?>" media="(max-width: 480px)" />
 			<!--[if IE 9]></video><![endif]-->
-			<img class="lazyload blur-up blur-up-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-src="<?php echo $bild['sizes']['rcaltlarge'] ?>" alt="<?php echo $bild['title'] ?>" />
+			<img class="lazyload blur-up blur-up-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-src="<?php echo $bild['sizes']['ularge'] ?>" alt="<?php echo $bild['title'] ?>" />
 		</picture>
 		
-		<div class="modal-button info uppercase" href="#exif'.$id.'"><?php echo $bild['title'] ?></div>
+		<div class="img-text-bg">
+			<div class="img-text-center">
+			<h2><?php echo $bild['title'] ?></h2>
+			<p>Herausragende Leistungen lassen sich nur mit den besten Mitarbeitern verwirklichen. Gerade deshalb sind wir sehr stolz auf unser Team. Die Erfahrung aus vielen Eins&auml;tzen gibt uns das Gesp&uuml;r f&uuml;r den behutsamen Umgang mit riskanten Situationen.</p>
+			</div>
+		</div>
 	</div>
 
 	<?php endif ?>

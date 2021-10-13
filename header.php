@@ -9,6 +9,11 @@
  * @package u-flow
  */
 
+		$color = get_field('farbe');
+		if($color == 'blue'){$mainColor = 'blue';}
+		elseif($color == 'red'){$mainColor = 'red';}
+		else{$mainColor = 'green';}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -27,7 +32,7 @@
 <div id="page" class="site" data-barba="container">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'u-flow' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header <?php echo $mainColor; ?>">
 		<div class="site-branding">
 			<?php
 			//the_custom_logo();
@@ -48,6 +53,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'uflow' ); ?><span class="line"></span><span class="line"></span><span class="line"></span></button>
 			<?php
 			wp_nav_menu(
 				array(

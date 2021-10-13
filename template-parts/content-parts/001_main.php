@@ -40,6 +40,11 @@
 			get_template_part('template-parts/content-parts/003_einspalter', 'onerow');} 
 
 
+		// Zweispalter - tworow
+		if( get_row_layout() == 'zweispalter' ){		
+			get_template_part('template-parts/content-parts/004_zweispalter', 'tworow');} 
+
+
 		// Mehrspalter - mrows
 		if( get_row_layout() == 'mehrspalter' ){
 			get_template_part('template-parts/content-parts/005_mehrspalter', 'mrows');} 	

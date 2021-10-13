@@ -18,7 +18,7 @@ function my_acf_admin_head()
 	?>
 <style type="text/css"> 
 	.d-none, .flex .order, .hiddentitel label, .hiddentitel .note{display: none !important;}
-	.acf-flexible-content .layout{width: 100%;}
+	.acf-flexible-content .layout{width: 100%; border: 0;}
 	
 	.flex tbody {display: flex; flex-wrap: wrap !important;}
 	.flex tr{flex: 1 1 0 !important;}
@@ -55,7 +55,8 @@ add_action('acf/input/admin_head', 'my_acf_admin_head');
  */
 
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'ularge', 1342, 658, true ); // Large
+add_image_size( 'umediumq', 658, 658, true ); // MediumQuadrat
+add_image_size( 'ularge', 1246, 758, true ); // Large
 
 
 if ( ! function_exists( 'u_flow_setup' ) ) :
